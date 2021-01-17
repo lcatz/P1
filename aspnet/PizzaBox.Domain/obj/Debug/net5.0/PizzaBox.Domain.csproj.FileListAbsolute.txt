@@ -1,0 +1,12 @@
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/bin/Debug/net5.0/PizzaBox.Domain.deps.json
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/bin/Debug/net5.0/PizzaBox.Domain.dll
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/bin/Debug/net5.0/ref/PizzaBox.Domain.dll
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/bin/Debug/net5.0/PizzaBox.Domain.pdb
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/obj/Debug/net5.0/PizzaBox.Domain.csprojAssemblyReference.cache
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/obj/Debug/net5.0/PizzaBox.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/obj/Debug/net5.0/PizzaBox.Domain.AssemblyInfoInputs.cache
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/obj/Debug/net5.0/PizzaBox.Domain.AssemblyInfo.cs
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/obj/Debug/net5.0/PizzaBox.Domain.csproj.CoreCompileInputs.cache
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/obj/Debug/net5.0/PizzaBox.Domain.dll
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/obj/Debug/net5.0/ref/PizzaBox.Domain.dll
+/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Domain/obj/Debug/net5.0/PizzaBox.Domain.pdb
