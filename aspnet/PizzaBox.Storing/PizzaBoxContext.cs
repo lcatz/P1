@@ -11,6 +11,14 @@ namespace PizzaBox.Storing
 
     public DbSet<Order> Orders { get; set; }
 
+    // public DbSet<Size> Size { get; set; }
+
+    // public DbSet<PizzaBox> Pizza { get; set; }
+
+    // public DbSet<User> User { get; set; }
+
+    // public DbSet<Topping> Topping { get; set; }
+
     public PizzaBoxContext(DbContextOptions<PizzaBoxContext> options) : base(options) {}
     protected override void OnModelCreating(ModelBuilder builder)
     {
