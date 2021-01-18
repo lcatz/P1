@@ -1,25 +1,22 @@
-using PizzaBox.Domain.Abstracts;
+using System;
+using System.Collections.Generic;
+
 
 namespace PizzaBox.Domain.Models
 {
-  public class Crust : AModel
+  public class Crust
   {
-    public APizzaModel Pizza = new APizzaModel();
+    public List<Pizza> Pizzas { get; set; }
     public string Name { get; set; }
 
     public decimal Price { get; set; }
 
-    public Crust() { }
+    public long CrustID { get; set; }
 
-    public Crust(string name, decimal price)
+    public Crust()
     {
-      Name = name;
-      Price = price;
+      CrustID = DateTime.Now.Ticks;
     }
 
-    public override string ToString()
-    {
-      return $"{Name}";
-    }
   }
 }

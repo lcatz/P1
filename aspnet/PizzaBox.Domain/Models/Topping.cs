@@ -1,24 +1,21 @@
-using PizzaBox.Domain.Abstracts;
+using System;
+using System.Collections.Generic;
 
 namespace PizzaBox.Domain.Models
 {
-  public class Topping : AModel
+  public class Topping
   {
+    public long ToppingID { get; set; }
+
     public string Name { get; set; }
 
     public decimal Price { get; set; }
 
-    public Topping() { }
+    public List<PizzaTopping> PizzaToppings { get; set; }
 
-    public Topping(string name, decimal price)
+    public Topping()
     {
-      Name = name;
-      Price = price;
-    }
-
-    public override string ToString()
-    {
-      return $"{Name}";
+      ToppingID = DateTime.Now.Ticks;
     }
   }
 }
