@@ -8,10 +8,10 @@ namespace PizzaBox.Client.Models
 
     public OrderViewModel Order { get; set; }
 
-    public CustomerViewModel(IConfiguration configuration)
+    public CustomerViewModel()
     {
       Name = "Lawrence";
-      Order = new OrderViewModel(configuration);
+      Order = new OrderViewModel();
     }
   }
 }

@@ -6,29 +6,22 @@ namespace PizzaBox.Storing
 {
   public class PizzaBoxContext : DbContext
   {
-    private readonly IConfiguration _configuration;
 
     public DbSet<Store> Stores { get; set; }
 
-    public PizzaBoxContext(IConfiguration configuration)
-    {
-      _configuration = configuration;
-    }
+    public DbSet<Order> Orders { get; set; }
 
-
-    protected override void OnConfiguring(DbContextOptionsBuilder builder)
-    {
-      builder.UseSqlServer(_configuration.GetConnectionString("sqlserver"));
-    }
-
+    public PizzaBoxContext(DbContextOptions<PizzaBoxContext> options) : base(options) {}
     protected override void OnModelCreating(ModelBuilder builder)
     {
+      builder.Entity<Order>().HasKey(o => o.EntityID);
       builder.Entity<Store>().HasKey(s => s.EntityID);
       builder.Entity<Store>().HasData(
         new Store() { EntityID = 1, Name = "Pizza Hut"},
         new Store() { EntityID = 2, Name = "Little Caesers"},
         new Store() { EntityID = 3, Name = "Dominoes"}
       );
+
     }
   }
 }

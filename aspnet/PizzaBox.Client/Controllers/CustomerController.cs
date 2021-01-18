@@ -1,21 +1,31 @@
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using PizzaBox.Client.Models;
+using PizzaBox.Storing;
 
 namespace PizzaBox.WebClient.Controllers
 {
   public class CustomerController : Controller
   {
-    private readonly IConfiguration _configuration;
 
-    public CustomerController(IConfiguration configuration)
+    private readonly PizzaBoxRepository _ctx;
+
+    public CustomerController(PizzaBoxRepository context)
     {
-      _configuration = configuration;
+      _ctx = context;
     }
+
     [HttpGet]
     public IActionResult Home()
     {
-      return View("home", new CustomerViewModel(_configuration));
+      var customer = new CustomerViewModel();
+
+      customer.Order = new OrderViewModel()
+      {
+        Stores = _ctx.GetStores()
+      };
+      return View("home", customer);
     }
   }
 }

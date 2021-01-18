@@ -15613,11 +15613,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Customer/Home.cshtml",
-      "TargetPath": "Views\\Customer\\Home.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -15625,6 +15620,11 @@
     {
       "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/Home.cshtml",
+      "TargetPath": "Views\\Shared\\Home.cshtml",
       "FileKind": "mvc"
     },
     {
