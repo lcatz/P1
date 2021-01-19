@@ -15623,8 +15623,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/UserMenu.cshtml",
+      "TargetPath": "Views\\Shared\\UserMenu.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/Home.cshtml",
       "TargetPath": "Views\\Shared\\Home.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Order/Checkout.cshtml",
+      "TargetPath": "Views\\Order\\Checkout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Home/Logout.cshtml",
+      "TargetPath": "Views\\Home\\Logout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Home/FailedLogin.cshtml",
+      "TargetPath": "Views\\Home\\FailedLogin.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15633,13 +15653,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Home/Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Order/UserHistory.cshtml",
+      "TargetPath": "Views\\Order\\UserHistory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Home/Login.cshtml",
+      "TargetPath": "Views\\Home\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/_CustomLayout.cshtml",
       "TargetPath": "Views\\Shared\\_CustomLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/lawrence/revature/projects/p1/aspnet/PizzaBox.Client/Views/Pizza/Create.cshtml",
+      "TargetPath": "Views\\Pizza\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],

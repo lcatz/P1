@@ -1,0 +1,25 @@
+@model PizzaBox.Client.Models.UserHistoryViewModel
+
+<div>
+  @if(@Model.Orders != null)
+  {
+    @foreach (var item in @Model.Orders)
+    {
+      <label>Order Number: </label>
+      <label>@item.OrderID</label>
+      <br>
+      @foreach (var i in @Model.Pizzas)
+      {
+        if(i.Order == item)
+        {
+          <label>Price: </label>
+          <label>@i.Price</label>
+          <br>
+        }
+      }
+    }
+  }
+</div>
+<div>
+  <a href="/order/menu" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Back to Menu</a>
+</div>

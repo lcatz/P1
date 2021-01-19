@@ -1,0 +1,47 @@
+@model PizzaBox.Client.Models.PizzaViewModel
+
+<form action="pizza/create" method="post">
+@Html.AntiForgeryToken()
+<div>
+  <selct asp-formaction="@Model.Crust">
+    @foreach (var item in @Model.CrustList)
+    {
+      <option value="@item.Name">@item.Name</option>
+    }
+  </selct>
+  <br>
+</div>
+<div>
+  @foreach (var item in @Model.SizeList)
+  {
+    <label>
+      @Html.RadioButtonFor(sm => sm.Size, @item.Name)@item.Name
+    </label>
+  }
+  <br>
+</div>
+<div>
+  @for (int i = 0; i < @Model.Count; i++)
+  {
+    @if(i == 0)
+    {
+      @Html.CheckBoxFor(tm => tm.Topping1, true);
+      <label>@Model.Toppings[i]</label>
+    }
+    @if(i == 1)
+    {
+      @Html.CheckBoxFor(tm => tm.Topping2, true);
+      <label>@Model.Toppings[i]</label>
+    }
+    @if(i == 2)
+    {
+      @Html.CheckBoxFor(tm => tm.Topping3, true);
+      <label>@Model.Toppings[i]</label>
+    }
+  }
+  <br>
+</div>
+<div>
+  <button type="submit">Create</button>
+</div>
+</form>

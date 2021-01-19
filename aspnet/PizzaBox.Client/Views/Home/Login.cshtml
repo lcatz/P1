@@ -1,0 +1,17 @@
+@model PizzaBox.Client.Models.UserViewModel
+
+<form action="home/login" method="post">
+    @Html.AntiForgeryToken()
+    <div>
+        <label asp-for="@Model.Name">User Name</label>
+        <br>
+        <input type="text" asp-for="@Model.Name" />
+        @Html.ValidationMessageFor(vm => vm.Name)
+        <br>
+    </div>
+    <div>
+        <br>
+        <button type="reset">Clear</button>
+        <button type="submit">Login</button>
+    </div>
+</form>

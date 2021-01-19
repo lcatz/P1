@@ -6,12 +6,8 @@ namespace PizzaBox.Storing.Repository
 {
   public class PizzaRepository
   {
-    private  PizzaBoxContext _ctx;
 
-    public PizzaRepository(PizzaBoxContext context)
-    {
-      _ctx = context;
-    }
+    private static readonly PizzaBoxContext _ctx = PizzaBoxContext.Instance;
 
     public List<Pizza> Get()
     {

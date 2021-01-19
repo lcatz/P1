@@ -1,38 +1,56 @@
-using System;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using PizzaBox.Client.Models;
 using PizzaBox.Domain.Models;
-using PizzaBox.Storing;
+using PizzaBox.Storing.Repository;
 
 namespace PizzaBox.Client.Controllers
 {
   public class OrderController : Controller
   {
-    private readonly PizzaBoxContext _ctx;
-    public OrderController(PizzaBoxContext context)
+    private PizzaRepository _PizzaRepo = new PizzaRepository();
+
+    private OrderRepository _OrderRepo = new OrderRepository();
+
+    private UserRepository _UserRepo = new UserRepository();
+    [HttpGet]
+    public IActionResult Get()
     {
-      _ctx = context;
+      return View();
+    }
+    [HttpGet]
+    public IActionResult Checkout()
+    {
+      return View(new OrderViewModel());
     }
     [HttpPost]
-    [ValidateAntiForgeryToken]
-    public IActionResult Post(OrderViewModel model)
+    public IActionResult Checkout(OrderViewModel OrderViewModel)
     {
-      if (ModelState.IsValid)
+      Order order = new Order();
+      order.UserName = TempData["user"].ToString();
+      TempData.Keep("user");
+      order.StoreName = OrderViewModel.Store;
+      _OrderRepo.Post(order);
+      foreach(var item in OrderViewModel.Pizzas)
       {
-        var order = new Order()
-        {
-          DateModified = DateTime.Now,
-          Store = _ctx.Stores.FirstOrDefault(s => s.Name == model.Store)
-        };
-        _ctx.Orders.Add(order);
-        _ctx.SaveChanges();
-
-        return View("OrderPlaced");
+        item.Order = order;
+        item.HasOrder = true;
+        _PizzaRepo.Put(item);
       }
+      return View("UserMenu");
+    }
+    [HttpGet]
+    public IActionResult UserHistory()
+    {
+      User user = _UserRepo.Get(TempData["user"].ToString());
+      TempData.Keep("user");
+      UserHistoryViewModel userhistoryviewmodel = new UserHistoryViewModel();
+      userhistoryviewmodel.Orders.RemoveAll(item => item.UserName != user.Name);
+      return View(userhistoryviewmodel);
+    }
 
-      return View("home", model);
+    public IActionResult menu()
+    {
+      return View("UserMenu");
     }
   }
 }

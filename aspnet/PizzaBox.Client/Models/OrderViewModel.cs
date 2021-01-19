@@ -1,18 +1,33 @@
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using Microsoft.Extensions.Configuration;
-using PizzaBox.Storing;
+using PizzaBox.Domain.Models;
+using PizzaBox.Storing.Repository;
 
 namespace PizzaBox.Client.Models
 {
   public class OrderViewModel
   {
+    private PizzaRepository _PizzaRepo = new PizzaRepository();
 
-    public List<string> Stores { get; set; }
+    private StoreRepository _StoreRepo = new StoreRepository();
 
-    [Required]
+    public List<Pizza> Pizzas { get; set; }
+
+    public List<Store> Stores { get; set; }
+
     public string Store { get; set; }
 
+    public OrderViewModel()
+    {
+      Stores = _StoreRepo.Get();
+      List<Pizza> Temp = _PizzaRepo.Get();
+      Pizzas = new List<Pizza>();
+      foreach(var pizza in Temp)
+      {
+        if(pizza.HasOrder == false)
+        {
+          Pizzas.Add(pizza);
+        }
+      }
+    }
   }
 }

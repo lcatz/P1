@@ -23,6 +23,17 @@ namespace PizzaBox.Storing
 
 
     public PizzaBoxContext(DbContextOptions<PizzaBoxContext> options) : base(options) {}
+
+    private static readonly PizzaBoxContext _connection = new PizzaBoxContext();
+
+    public PizzaBoxContext() { }
+
+    public static PizzaBoxContext Instance
+    {
+      get{
+        return _connection;
+      }
+    }
     protected override void OnModelCreating(ModelBuilder builder)
     {
       builder.Entity<Order>().HasKey(o => o.OrderID);
@@ -66,7 +77,7 @@ namespace PizzaBox.Storing
       builder.Entity<Size>().HasData(
         new Size() {Name = "Medium", Price = 12.00M},
         new Size() {Name = "Large", Price = 15.00M},
-        new Size() {Name = "X-Large", Price = 18.00M},
+        new Size() {Name = "X-Large", Price = 18.00M}
       );
 
       builder.Entity<User>().HasData(
