@@ -1,6 +1,6 @@
 @model PizzaBox.Client.Models.UserViewModel
 
-<form action="home/login" method="post">
+<form action="/home/login" method="post">
     @Html.AntiForgeryToken()
     <div>
         <label asp-for="@Model.Name">User Name</label>

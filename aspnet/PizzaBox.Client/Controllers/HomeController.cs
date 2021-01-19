@@ -17,7 +17,7 @@ namespace PizzaBox.Client.Controllers
       return View();
     }
 
-    [HttpPost]
+    [HttpGet]
     public IActionResult Login()
     {
       return View();
@@ -61,6 +61,12 @@ namespace PizzaBox.Client.Controllers
       {
         return View("FailedLogin");
       }
+    }
+
+    [HttpGet]
+    public IActionResult Logout()
+    {
+      return View();
     }
   }
 }

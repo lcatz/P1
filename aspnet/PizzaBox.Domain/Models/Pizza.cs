@@ -18,6 +18,8 @@ namespace PizzaBox.Domain.Models
 
     public Size Size { get; set; }
 
+    public string Name { get; set; }
+
     public Pizza()
     {
 
@@ -25,7 +27,7 @@ namespace PizzaBox.Domain.Models
 
     public override string ToString()
     {
-      return $"{PizzaID} {Price} {Crust.Name} {Size.Name} {PizzaToppings.Count}";
+      return $"{PizzaID} {Name} {Price} {Crust.Name} {Size.Name} {PizzaToppings.Count}";
     }
 
   }

@@ -22,11 +22,14 @@ namespace PizzaBox.Storing
     public DbSet<Size> Size { get; set; }
 
 
-    public PizzaBoxContext(DbContextOptions<PizzaBoxContext> options) : base(options) {}
+    protected override void OnConfiguring(DbContextOptionsBuilder builder)
+    {
+      builder.UseSqlServer("Server=tcp:projectp1server.database.windows.net,1433;Initial Catalog=lcatproject1db;Persist Security Info=False;User ID=sysadmin;Password=Abcd1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+    }
 
     private static readonly PizzaBoxContext _connection = new PizzaBoxContext();
 
-    public PizzaBoxContext() { }
+    public PizzaBoxContext() {}
 
     public static PizzaBoxContext Instance
     {

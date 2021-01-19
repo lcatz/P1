@@ -1,12 +1,14 @@
 @model PizzaBox.Client.Models.PizzaViewModel
 
-<form action="pizza/create" method="post">
+<form action="/pizza/create" method="post">
 @Html.AntiForgeryToken()
 <div>
-  <selct asp-formaction="@Model.Crust">
+  <selct asp-for="@Model.Crust">
     @foreach (var item in @Model.CrustList)
     {
-      <option value="@item.Name">@item.Name</option>
+      <label>
+      @Html.RadioButtonFor(cm => cm.Size, @item.Name)@item.Name
+      </label>
     }
   </selct>
   <br>

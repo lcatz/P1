@@ -4,7 +4,7 @@
   @if(@Model.Pizzas != null)
   {
     @foreach (var item in @Model.Pizzas)
-    {
+    { <Label>@item.Name</Label>
       <label>Price: </label>
       <label>@item.Price</label>
       <br>
@@ -12,7 +12,7 @@
   }
 </div>
 <div>
-  <a ref="/pizza/create" class="btn btn-secondary btn-sm active" role="button" aria-pressed="true">Create Pizza</a>
+  <a href="/pizza/create" class="btn btn-secondary btn-sm active" role="button" aria-pressed="true">Create Pizza</a>
   <br>
   <br>
 </div>

@@ -39,19 +39,19 @@ namespace PizzaBox.Storing.Migrations
                     b.HasData(
                         new
                         {
-                            CrustID = 637465838354734483L,
+                            CrustID = 637466042997369968L,
                             Name = "Thin",
                             Price = 2.00m
                         },
                         new
                         {
-                            CrustID = 637465838354735543L,
+                            CrustID = 637466042997370869L,
                             Name = "Thick",
                             Price = 3.00m
                         },
                         new
                         {
-                            CrustID = 637465838354735553L,
+                            CrustID = 637466042997370876L,
                             Name = "Cheese-Stuffed",
                             Price = 4.00m
                         });
@@ -64,14 +64,17 @@ namespace PizzaBox.Storing.Migrations
                         .HasColumnType("bigint")
                         .UseIdentityColumn();
 
-                    b.Property<long>("StoreEntityID")
-                        .HasColumnType("bigint");
-
                     b.Property<long?>("StoreID")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("StoreName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<long?>("UserID")
                         .HasColumnType("bigint");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("OrderID");
 
@@ -94,6 +97,9 @@ namespace PizzaBox.Storing.Migrations
 
                     b.Property<bool>("HasOrder")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("OrderID")
                         .HasColumnType("bigint");
@@ -150,19 +156,19 @@ namespace PizzaBox.Storing.Migrations
                     b.HasData(
                         new
                         {
-                            SizeID = 637465838354736353L,
+                            SizeID = 637466042997371679L,
                             Name = "Medium",
                             Price = 12.00m
                         },
                         new
                         {
-                            SizeID = 637465838354737204L,
+                            SizeID = 637466042997372517L,
                             Name = "Large",
                             Price = 15.00m
                         },
                         new
                         {
-                            SizeID = 637465838354737211L,
+                            SizeID = 637466042997372526L,
                             Name = "X-Large",
                             Price = 18.00m
                         });
@@ -220,37 +226,37 @@ namespace PizzaBox.Storing.Migrations
                     b.HasData(
                         new
                         {
-                            ToppingID = 637465838354718217L,
+                            ToppingID = 637466042997353000L,
                             Name = "Cheese",
                             Price = 0.99m
                         },
                         new
                         {
-                            ToppingID = 637465838354733440L,
+                            ToppingID = 637466042997368870L,
                             Name = "Pineapple",
                             Price = 1.50m
                         },
                         new
                         {
-                            ToppingID = 637465838354733462L,
+                            ToppingID = 637466042997368900L,
                             Name = "Ham",
                             Price = 1.99m
                         },
                         new
                         {
-                            ToppingID = 637465838354733466L,
+                            ToppingID = 637466042997368904L,
                             Name = "Pepperoni",
                             Price = 1.99m
                         },
                         new
                         {
-                            ToppingID = 637465838354733468L,
+                            ToppingID = 637466042997368906L,
                             Name = "Sausage",
                             Price = 1.99m
                         },
                         new
                         {
-                            ToppingID = 637465838354733470L,
+                            ToppingID = 637466042997368908L,
                             Name = "Sauce",
                             Price = 1.99m
                         });
