@@ -84,7 +84,8 @@ namespace PizzaBox.Storing
       );
 
       builder.Entity<User>().HasData(
-        new User() {UserID = 1, Name = "Lawrence"}
+        new User() {UserID = 1, Name = "Lawrence"},
+        new User() {UserID = 2, Name = "Ashley"}
       );
 
     }
