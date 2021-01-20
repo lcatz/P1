@@ -7,7 +7,7 @@
     @foreach (var item in @Model.CrustList)
     {
       <label>
-      @Html.RadioButtonFor(cm => cm.Size, @item.Name)@item.Name
+      @Html.RadioButtonFor(cm => cm.Crust, @item.Name)@item.Name
       </label>
     }
   </selct>
@@ -40,6 +40,22 @@
       @Html.CheckBoxFor(tm => tm.Topping3, true);
       <label>@Model.Toppings[i]</label>
     }
+    @if(i == 3)
+    {
+      @Html.CheckBoxFor(tm => tm.Topping4, true);
+      <label>@Model.Toppings[i]</label>
+    }
+    @if(i == 4)
+    {
+      @Html.CheckBoxFor(tm => tm.Topping5, true);
+      <label>@Model.Toppings[i]</label>
+    }
+    @if(i == 5)
+    {
+      @Html.CheckBoxFor(tm => tm.Topping6, true);
+      <label>@Model.Toppings[i]</label>
+    }
+
   }
   <br>
 </div>

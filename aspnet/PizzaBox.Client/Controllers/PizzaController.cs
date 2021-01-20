@@ -66,9 +66,30 @@ namespace PizzaBox.Client.Controllers
             pizzaviewmodel.ToppingList.Remove(_ToppingRepo.Get(pizzaviewmodel.Toppings[i]));
           }
         }
-        else
+        else if(i == 2)
         {
           if(!pizzaviewmodel.Topping3)
+          {
+            pizzaviewmodel.ToppingList.Remove(_ToppingRepo.Get(pizzaviewmodel.Toppings[i]));
+          }
+        }
+        else if(i == 3)
+        {
+          if(!pizzaviewmodel.Topping4)
+          {
+            pizzaviewmodel.ToppingList.Remove(_ToppingRepo.Get(pizzaviewmodel.Toppings[i]));
+          }
+        }
+        else if(i == 4)
+        {
+          if(!pizzaviewmodel.Topping5)
+          {
+            pizzaviewmodel.ToppingList.Remove(_ToppingRepo.Get(pizzaviewmodel.Toppings[i]));
+          }
+        }
+        else
+        {
+          if(!pizzaviewmodel.Topping6)
           {
             pizzaviewmodel.ToppingList.Remove(_ToppingRepo.Get(pizzaviewmodel.Toppings[i]));
           }

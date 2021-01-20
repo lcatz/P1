@@ -31,6 +31,13 @@ namespace PizzaBox.Client.Models
 
     public bool Topping3 { get; set; }
 
+    public bool Topping4 { get; set; }
+
+    public bool Topping5 { get; set; }
+
+    public bool Topping6 { get; set; }
+
+
     public PizzaViewModel()
     {
       CrustList = _CrustRepo.Get();
